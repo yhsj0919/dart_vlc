@@ -32,6 +32,7 @@ class PrimaryScreen extends StatefulWidget {
 
 class PrimaryScreenState extends State<PrimaryScreen> {
   Player player = Player(id: 0);
+  Player player1 = Player(id: 1);
   MediaType mediaType = MediaType.file;
   CurrentState current = CurrentState();
   PositionState position = PositionState();
@@ -111,8 +112,20 @@ class PrimaryScreenState extends State<PrimaryScreen> {
               clipBehavior: Clip.antiAlias,
               child: NativeVideo(
                 player: player,
-                width: isPhone ? 320 : 157,
-                height: isPhone ? 180 : 83,
+                width: isPhone ? 320 : 320,
+                height: isPhone ? 180 : 180,
+                volumeThumbColor: Colors.blue,
+                volumeActiveColor: Colors.blue,
+                showControls: false,
+              ),
+            ),
+            Card(
+              elevation: 4.0,
+              clipBehavior: Clip.antiAlias,
+              child: NativeVideo(
+                player: player1,
+                width: isPhone ? 320 : 320,
+                height: isPhone ? 180 : 180,
                 volumeThumbColor: Colors.blue,
                 volumeActiveColor: Colors.blue,
                 showControls: false,
@@ -271,6 +284,9 @@ class PrimaryScreenState extends State<PrimaryScreen> {
                                     onPressed: () => setState(
                                       () {
                                         player.open(
+                                          Playlist(medias: medias),
+                                        );
+                                        player1.open(
                                           Playlist(medias: medias),
                                         );
                                       },
