@@ -1,0 +1,15 @@
+name: dart_vlc_example
+description: Demonstrates how to use the dart_vlc plugin.
+publish_to: "none"
+
+environment:
+  sdk: '>=3.0.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dart_vlc:
+    path: ../
+  cupertino_icons: ^1.0.2
+flutter:
+  uses-material-design: true
