@@ -166,7 +166,7 @@ class _NativeVideoState extends State<NativeVideo> {
   NativeViewController? controller;
   GlobalKey<ControlState> controlKey = GlobalKey<ControlState>();
 
-  int get playerId => 0;
+  int get playerId => widget.player.id;
 
   @override
   void initState() {
