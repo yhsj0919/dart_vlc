@@ -13,12 +13,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  dart_vlc_ffi: ^0.2.0
-  path: ^1.8.2
-  audio_video_progress_bar: ^0.11.0
+  dart_vlc_ffi: ^0.2.0+1
+  path: ^1.9.1
+  audio_video_progress_bar: ^2.0.3
 
 dev_dependencies:
-  lints: ^2.0.1
+  lints: ^6.0.0
 
 # REMOVE THIS BEFORE PUBLISHING ON pub.dev.
 dependency_overrides:
